@@ -1,4 +1,10 @@
 #!/bin/sh
+
+while :; do
+    syncsettings.elf
+done &
+LOOP_PID=$!
+
 echo $0 $*
 
 EMU_DIR=/mnt/SDCARD/Emus/$PLATFORM/DC.pak
@@ -14,3 +20,5 @@ export FLYCAST_DATA_DIR=$FLYCAST_BIOS_DIR
 export FLYCAST_CONFIG_DIR="$EMU_DIR/flycast/config/"
 
 ./flycast "$@"
+
+kill $LOOP_PID

@@ -45,7 +45,7 @@ esac
 
 ./performance.sh
 
-/mnt/SDCARD/Apps/PortMaster/PortMaster/gptokeyb2 -c "./defkeys.gptk" &
+HOTKEY=guide /mnt/SDCARD/Apps/PortMaster/PortMaster/gptokeyb2 -c "./defkeys.gptk" &
 sleep 0.3
 
 HOME="$EMU_DIR" ./mupen64plus "$ROM_PATH"
